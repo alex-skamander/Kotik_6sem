@@ -1,0 +1,43 @@
+<div th:fragment="header">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 45px;
+            margin-left: 150px;
+        }
+
+        .btn-secondary {
+            color: #fff;
+            background-color: green;
+            border-color: #184b18;
+        }
+
+    </style>
+
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <div class="logo">KOTIK</div>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+            <li><a href="/cats" class="nav-link px-2 link-dark">Cats</a></li>
+            <li><a href="/dogs" class="nav-link px-2 link-dark">Dogs</a></li>
+            <li><a href="/bird" class="nav-link px-2 link-dark">Bird</a></li>
+            <li><a href="/rodents" class="nav-link px-2 link-dark">Rodents</a></li>
+
+        </ul>
+
+        <div class="col-md-3 text-end">
+            <a href="/cart" type="button" class="btn btn-outline-primary me-2">Shopping cart</a>
+        </div>
+    </div>
+</div>
+
+    <div>
+        <form th:action="/logout" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+    </div>
